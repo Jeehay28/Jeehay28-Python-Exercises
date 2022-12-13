@@ -13,15 +13,8 @@ function solution(s) {
     for (any of loc) {
         if (any <= s.length - 2) {
             console.log(any);
-            s = s.replaceAt(any + 1, s[any + 1].toUpperCase());
-            console.log(s);
+            s = s.substring(0, any + 1) + s[any + 1].toUpperCase() + s.substring(any + 2);
         }
     }
     return s;
-}
-
-String.prototype.replaceAt = function (index, char) {
-    let txt = this.split("");
-    txt[index] = char;
-    return txt.join("");
 }
