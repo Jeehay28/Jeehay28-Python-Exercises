@@ -4,7 +4,7 @@ function solution(ingredient) {
     let pattern = /1231/
     while (pattern.test(str)) {
         let left = str.slice(0, str.search(pattern));
-        left.slice(-4)
+        left.slice(-8)
         let right = str.slice(str.search(pattern)+4);
         str = left.slice(-4) + str.slice(str.search(pattern)+4);
         cnt += 1
